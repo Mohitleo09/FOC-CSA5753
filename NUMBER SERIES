@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 int main()
 {
     int N, i;
@@ -13,6 +12,5 @@ int main()
         else
             printf("%d,", i);
     }
-    getch();
     return 0;
 }
