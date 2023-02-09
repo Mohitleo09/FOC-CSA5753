@@ -1,22 +1,29 @@
 #include <stdio.h>
 
-int removeDuplicates(int arr[], int n)
-{
-    int i, j = 0;
-    for (i = 0; i < n - 1; i++)
-        if (arr[i] != arr[i + 1])
-            arr[j++] = arr[i];
-    arr[j++] = arr[n - 1];
-    return j;
-}
-
-int main()
-{
-    int arr[] = {1, 2, 2, 3, 4, 4, 4, 5, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    n = removeDuplicates(arr, n);
-    int i;
-    for (i = 0; i < n; i++)
+int main() {
+    int n, i, j, k;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the elements of the array (sorted in ascending order): \n");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (i = 0; i < n; i++) {
+        for (j = i+1; j < n;) {
+            if (arr[j] == arr[i]) {
+                for (k = j; k < n; k++) {
+                    arr[k] = arr[k + 1];
+                }
+                n--;
+            } else {
+                j++;
+            }
+        }
+    }
+    printf("Array after removing duplicates: \n");
+    for (i = 0; i < n; i++) {
         printf("%d ", arr[i]);
+    }
     return 0;
 }
