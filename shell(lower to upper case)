@@ -1,3 +1,4 @@
-echo “enter the string”
+echo "enter the string"
 read str
-echo  “upper case of the string is:${str^^}”
+echo "upper case of the string is:${str^^}"
+read
