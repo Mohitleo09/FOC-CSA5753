@@ -1,15 +1,17 @@
-echo n1
-read n1
-echo n2
-read n2
-echo n3
-read n3
-if [$n1 -gt $n2] && [$n1 -gt $n3]
+echo "Enter Num1"
+read num1
+echo "Enter Num2"
+read num2
+echo "Enter Num3"
+read num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
 then
-	echo “ $n1”
-elif [$n2 -gt $n1] && [$n2 -gt $n3]
+    echo $num1
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
 then
-	echo “$n2”
+    echo $num2
 else
-	echo “$n3”
+    echo $num3
 fi
+read
