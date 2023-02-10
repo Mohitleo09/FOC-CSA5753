@@ -1,0 +1,3 @@
+echo “enter the string”
+read str
+echo  “upper case of the string is:${str^^}”
