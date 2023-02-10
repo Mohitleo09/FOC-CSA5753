@@ -1,0 +1,4 @@
+echo “enter the string”
+read str
+n=${#str}
+echo “length of the string is:$n”
