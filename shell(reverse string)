@@ -1,0 +1,8 @@
+echo "enter the string"
+read str
+strlen=${#str}
+for((i=$strlen-1;i>=0;i--))
+do
+   revstr=$revstr${str:$i:1}
+done
+echo "reversed string:$revstr"
