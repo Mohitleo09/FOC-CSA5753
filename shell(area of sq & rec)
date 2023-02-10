@@ -1,0 +1,8 @@
+echo “Enter the side of the square:”
+read s
+echo “Enter the length and breadth of rectangle:”
+read leng
+read brea
+echo “Area of the square is:` expr $s \* $s ` ”
+echo “Area of the rectangle is: `expr $leng \* $brea`”
+read
