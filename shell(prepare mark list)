@@ -1,0 +1,20 @@
+echo "Enter the number of students: "
+read n
+echo "Enter the names of the students: "
+for ((i=1; i<=n; i++))
+do
+  read name
+  names[$i]=$name
+done
+echo "Enter the marks of the students: "
+for ((i=1; i<=n; i++))
+do
+  read marks
+  marks[$i]=$marks
+done
+echo "Name      Marks"
+for ((i=1; i<=n; i++))
+do
+  echo "${names[$i]}    ${marks[$i]}"
+done
+read
